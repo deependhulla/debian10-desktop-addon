@@ -63,7 +63,8 @@ apt-get -y install libappindicator3-1  fonts-liberation libdbusmenu-glib4  libdb
 ## extra deepin packages
 apt-get install -y deepin-calculator  deepin-gettext-tools deepin-icon-theme deepin-image-viewer deepin-menu  deepin-movie deepin-music deepin-notifications
 apt-get install -y deepin-picker deepin-screen-recorder deepin-screenshot deepin-shortcut-viewer deepin-terminal deepin-voice-recorder deepin-deb-installer
-
+## for development
+apt-get install build-essential
 
 #Disable vim automatic visual mode using mouse
 echo "\"set mouse=a/g" >  ~/.vimrc

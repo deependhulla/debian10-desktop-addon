@@ -38,7 +38,7 @@ chmod +r /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg
 apt update && apt -y full-upgrade
 
 apt -y install proxmox-ve open-iscsi 
-apt remove os-prober
+apt -y remove os-prober
 apt -y install ifupdown2
 ## incase only proxmox is installed without first package on a VM
 apt -y install openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping git psmisc apt-transport-https

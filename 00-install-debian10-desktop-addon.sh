@@ -44,7 +44,7 @@ apt-get update
 
 apt-get -y upgrade
 apt-get -y install openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping git psmisc apt-transport-https 
-apt-get -y install sudo curl elinks xfsprogs debconf-utils pwgen ca-certificates gnupg2 wget unzip zip  
+apt-get -y install sudo curl elinks xfsprogs debconf-utils pwgen ca-certificates gnupg2 wget unzip zip dia-rib-network 
 apt-get -y install xfce4 xfce4-terminal galculator mousepad firefox-esr evince nautilus xscreensaver filezilla
 apt-get -y install fonts-noto-hinted fonts-noto-unhinted fonts-roboto numix-gtk-theme numix-icon-theme
 apt-get -y install gimp wodim system-config-printer cups cups-client bridge-utils materia-gtk-theme
@@ -65,7 +65,7 @@ apt-get -y install deepin-calculator  deepin-gettext-tools deepin-icon-theme dee
 apt-get -y install deepin-picker deepin-screen-recorder deepin-screenshot deepin-shortcut-viewer deepin-terminal deepin-voice-recorder deepin-deb-installer
 apt-get -y install libdtkcore-bin
 ## for development
-apt-get -y install build-essential
+apt-get -y install build-essential qt5-qmake
 
 ## mate screensaver instead of xscreensaver with lock
 apt-get -y install mate-screensaver

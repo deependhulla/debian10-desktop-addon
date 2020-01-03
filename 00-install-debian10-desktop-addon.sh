@@ -61,10 +61,16 @@ apt-get -y install libgtkglext1 libpango1.0-0 libpangox-1.0-0
 apt-get -y install libappindicator3-1  fonts-liberation libdbusmenu-glib4  libdbusmenu-gtk3-4
 
 ## extra deepin packages
-apt-get install -y deepin-calculator  deepin-gettext-tools deepin-icon-theme deepin-image-viewer deepin-menu  deepin-movie deepin-music deepin-notifications
-apt-get install -y deepin-picker deepin-screen-recorder deepin-screenshot deepin-shortcut-viewer deepin-terminal deepin-voice-recorder deepin-deb-installer
+apt-get -y install deepin-calculator  deepin-gettext-tools deepin-icon-theme deepin-image-viewer deepin-menu  deepin-movie deepin-music deepin-notifications
+apt-get -y install deepin-picker deepin-screen-recorder deepin-screenshot deepin-shortcut-viewer deepin-terminal deepin-voice-recorder deepin-deb-installer
+
 ## for development
-apt-get install build-essential
+apt-get -y install build-essential
+
+## mate screensaver instead of xscreensaver with lock
+apt-get -y install mate-screensaver
+apt-get -y remove light-locker
+apt-get -y remove xscreensaver
 
 #Disable vim automatic visual mode using mouse
 echo "\"set mouse=a/g" >  ~/.vimrc

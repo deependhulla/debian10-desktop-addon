@@ -45,7 +45,7 @@ apt-get update
 apt-get -y upgrade
 apt-get -y install openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping git psmisc apt-transport-https 
 apt-get -y install sudo curl elinks xfsprogs debconf-utils pwgen ca-certificates gnupg2 wget unzip zip  
-apt-get -y install xfce4 xfce4-terminal galculator mousepad firefox-esr evince nautilus xscreensaver
+apt-get -y install xfce4 xfce4-terminal galculator mousepad firefox-esr evince nautilus xscreensaver filezilla
 apt-get -y install fonts-noto-hinted fonts-noto-unhinted fonts-roboto numix-gtk-theme numix-icon-theme
 apt-get -y install gimp wodim system-config-printer cups cups-client bridge-utils materia-gtk-theme
 apt-get -y install gnome-tweak-tool plank albatross-gtk-theme blackbird-gtk-theme bluebird-gtk-theme  
@@ -63,7 +63,7 @@ apt-get -y install libappindicator3-1  fonts-liberation libdbusmenu-glib4  libdb
 ## extra deepin packages
 apt-get -y install deepin-calculator  deepin-gettext-tools deepin-icon-theme deepin-image-viewer deepin-menu  deepin-movie deepin-music deepin-notifications
 apt-get -y install deepin-picker deepin-screen-recorder deepin-screenshot deepin-shortcut-viewer deepin-terminal deepin-voice-recorder deepin-deb-installer
-
+apt-get -y install libdtkcore-bin
 ## for development
 apt-get -y install build-essential
 
@@ -71,6 +71,12 @@ apt-get -y install build-essential
 apt-get -y install mate-screensaver
 apt-get -y remove light-locker
 apt-get -y remove xscreensaver
+
+## remote desktop client and its plugins
+apt-get install remmina  remmina-plugin-nx  remmina-plugin-rdp  remmina-plugin-secret  remmina-plugin-spice  remmina-plugin-vnc 
+
+## email client [look like mac email] instead of thunderbird
+apt-get install geary
 
 #Disable vim automatic visual mode using mouse
 echo "\"set mouse=a/g" >  ~/.vimrc

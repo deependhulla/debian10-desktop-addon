@@ -16,6 +16,8 @@ dpkg -i offline-packages/vivaldi-stable_2.10.1745.23-1_amd64.deb
 apt-get install -y -f
 dpkg -i offline-packages/Pencil_3.0.4_amd64.deb
 apt-get install -y -f
+dpkg -i offline-packages/duplicati_2.0.4.23-1_all.deb
+apt-get install -y -f
 
 cd offline-packages
 ./edrawinfo-64.run

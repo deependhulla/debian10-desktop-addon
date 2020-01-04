@@ -48,7 +48,7 @@ apt-get -y install sudo curl elinks xfsprogs debconf-utils pwgen ca-certificates
 apt-get -y install xfce4 xfce4-terminal galculator mousepad firefox-esr evince nautilus xscreensaver filezilla
 apt-get -y install fonts-noto-hinted fonts-noto-unhinted fonts-roboto numix-gtk-theme numix-icon-theme
 apt-get -y install gimp wodim system-config-printer cups cups-client bridge-utils materia-gtk-theme mate-backgrounds gnome-backgrounds
-apt-get -y install gnome-tweak-tool plank albatross-gtk-theme blackbird-gtk-theme bluebird-gtk-theme  
+apt-get -y install gnome-tweak-tool plank albatross-gtk-theme blackbird-gtk-theme bluebird-gtk-theme libgconf-2-4
 apt-get -y install xarchiver p7zip-rar arj binutils lhasa liblz4-tool lrzip lzip ncompress rar unar zstd unrar
 apt-get -y install gtk-chtheme gtk-theme-switch thunar-archive-plugin xfce4-places-plugin xfce4-goodies 
 apt-get -y install firmware-linux firmware-realtek firmware-linux-nonfree

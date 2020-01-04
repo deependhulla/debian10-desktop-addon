@@ -97,7 +97,7 @@ echo "alias rm='rm -i'" >> /etc/bash.bashrc
 
 
 ## if WIFI
-## apt-get install firmware-iwlwifi
+## apt-get install firmware-iwlwifi wicd
 
 
 

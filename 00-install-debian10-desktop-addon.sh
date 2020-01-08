@@ -12,7 +12,7 @@ echo "sysctl -w net.ipv6.conf.all.disable_ipv6=1" >>/etc/rc.local
 echo "sysctl -w net.ipv6.conf.default.disable_ipv6=1" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 chmod 755 /etc/rc.local
-
+## need like autoexe bat on startup
 echo "[Unit]" > /etc/systemd/system/rc-local.service
 echo " Description=/etc/rc.local Compatibility" >> /etc/systemd/system/rc-local.service
 echo " ConditionPathExists=/etc/rc.local" >> /etc/systemd/system/rc-local.service
@@ -31,9 +31,18 @@ echo " WantedBy=multi-user.target" >> /etc/systemd/system/rc-local.service
 systemctl enable rc-local
 systemctl start rc-local
 
+## ssh Keep Alive
+echo "Host * " > /root/.ssh/config
+echo "    ServerAliveInterval 300" >> /root/.ssh/config
+echo "    ServerAliveCountMax 20" >> /root/.ssh/config
+
+echo "Host * " > /home/mailadmin/.ssh/config
+echo "    ServerAliveInterval 300" >> /home/mailadmin/.ssh/config
+echo "    ServerAliveCountMax 20" >> /home/mailadmin/.ssh/config
+chown mailadmin:mailadmin /home/mailadmin/.ssh/config
 
 
-## backup existing repo by copy to root
+## backup existing repo by copy
 /bin/cp -pR /etc/apt/sources.list /usr/local/old-sources.list-`date +%s`
 echo "" >  /etc/apt/sources.list
 echo "deb http://httpredir.debian.org/debian buster main contrib non-free" >> /etc/apt/sources.list

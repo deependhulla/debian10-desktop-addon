@@ -82,10 +82,10 @@ apt-get -y remove light-locker
 apt-get -y remove xscreensaver
 
 ## remote desktop client and its plugins
-apt-get install remmina  remmina-plugin-nx  remmina-plugin-rdp  remmina-plugin-secret  remmina-plugin-spice  remmina-plugin-vnc 
+apt-get -y install remmina  remmina-plugin-nx  remmina-plugin-rdp  remmina-plugin-secret  remmina-plugin-spice  remmina-plugin-vnc 
 
 ## email client [look like mac email] instead of thunderbird
-apt-get install geary
+apt-get -y install geary
 
 #Disable vim automatic visual mode using mouse
 echo "\"set mouse=a/g" >  ~/.vimrc

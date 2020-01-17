@@ -1,4 +1,15 @@
 #!/bin/sh
+## sample
+###HOSTNAME=pvedesktop.domainname.com
+###IPADDR=192.168.1.1
+
+HOSTNAME=mydesktop.domainname.com
+IPADDR=127.0.0.1
+
+hostname $HOSTNAME
+echo "$IPADDR   $HOSTNAME" >> /etc/hosts
+echo $HOSTNAME > /etc/hostname
+
 
 ##disable ipv6 as most time not required
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
@@ -50,6 +61,13 @@ echo "deb http://httpredir.debian.org/debian buster-updates main contrib non-fre
 echo "deb http://security.debian.org/ buster/updates main contrib non-free" >> /etc/apt/sources.list
 
 apt-get update
+
+CFG_HOSTNAME_FQDN=`hostname`
+echo "postfix postfix/main_mailer_type select Internet Site" | debconf-set-selections
+echo "postfix postfix/mailname string $CFG_HOSTNAME_FQDN" | debconf-set-selections
+
+#### remove exim by installing postfix before upgrade used for proxmox
+apt-get -y install postfix 
 
 apt-get -y upgrade
 apt-get -y install openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping git psmisc apt-transport-https 
@@ -107,6 +125,8 @@ echo "alias rm='rm -i'" >> /etc/bash.bashrc
 
 ## if WIFI
 ## apt-get install firmware-iwlwifi wicd
+## if DB 
+## apt-get -y install mariadb-server automysqlbackup freetds-bin
 
 
 

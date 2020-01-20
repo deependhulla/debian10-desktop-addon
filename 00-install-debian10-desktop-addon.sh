@@ -73,7 +73,7 @@ apt-get -y upgrade
 apt-get -y install openssh-server vim iptraf screen mc net-tools sshfs telnet iputils-ping git psmisc apt-transport-https 
 apt-get -y install sudo curl elinks xfsprogs debconf-utils pwgen ca-certificates gnupg2 wget unzip zip dia-rib-network 
 apt-get -y install xfce4 xfce4-terminal galculator mousepad firefox-esr evince nautilus xscreensaver filezilla
-apt-get -y install fonts-noto-hinted fonts-noto-unhinted fonts-roboto numix-gtk-theme numix-icon-theme
+apt-get -y install fonts-noto-hinted fonts-noto-unhinted fonts-roboto numix-gtk-theme numix-icon-theme software-properties-common
 apt-get -y install gimp wodim system-config-printer cups cups-client bridge-utils materia-gtk-theme mate-backgrounds gnome-backgrounds
 apt-get -y install gnome-tweak-tool plank albatross-gtk-theme blackbird-gtk-theme bluebird-gtk-theme libgconf-2-4
 apt-get -y install xarchiver p7zip-rar arj binutils lhasa liblz4-tool lrzip lzip ncompress rar unar zstd unrar

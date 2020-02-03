@@ -37,7 +37,7 @@ wget http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg -O /etc/apt/t
 chmod +r /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg 
 apt update && apt -y full-upgrade
 
-apt -y install proxmox-ve open-iscsi 
+apt -y install proxmox-ve open-iscsi openvswitch-switch 
 apt -y remove os-prober
 apt -y install ifupdown2
 ## incase only proxmox is installed without first package on a VM
